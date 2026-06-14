@@ -42,7 +42,6 @@ public class Article implements Searchable {
         Article article = (Article) o;
         return id.equals(article.id);
     }
-
     @Override
     public int hashCode() { return id.hashCode(); }
 }

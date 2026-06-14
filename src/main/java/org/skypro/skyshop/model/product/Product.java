@@ -40,7 +40,10 @@ public abstract class Product implements Searchable {
     }
 
     public abstract int getPrice();
-    public boolean isSpecial() { return false; }
+
+    public boolean isSpecial() {
+        return false;
+    }
 
     @Override
     public String toString() {

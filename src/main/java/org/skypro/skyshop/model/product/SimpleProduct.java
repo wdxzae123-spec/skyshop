@@ -12,5 +12,7 @@ public class SimpleProduct extends Product {
     }
 
     @Override
-    public int getPrice() { return price; }
+    public int getPrice() {
+        return price;
+    }
 }
