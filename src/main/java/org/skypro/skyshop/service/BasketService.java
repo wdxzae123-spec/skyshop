@@ -18,6 +18,9 @@ public class BasketService {
         this.storageService = storageService;
     }
 
+    /**
+     * В методе addProduct выбрасываем NoSuchProductException, а в getUserBasket тоже заменяем orElseThrow() на осмысленное исключение
+     */
     public void addProduct(UUID id) {
         storageService.getProductById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Товар с ID " + id + " не найден"));

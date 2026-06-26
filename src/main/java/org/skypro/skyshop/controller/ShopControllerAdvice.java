@@ -1,6 +1,10 @@
 package org.skypro.skyshop.controller;
+/**
+ * Создаём класс в пакете controller.
+ * Он будет перехватывать NoSuchProductException и возвращать 404 Not Found с телом ShopError
+ */
 
-import org.skypro.skyshop.exeption.NoSuchProductException;
+import org.skypro.skyshop.exception.NoSuchProductException;
 import org.skypro.skyshop.model.error.ShopError;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
