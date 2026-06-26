@@ -22,7 +22,6 @@ public class StorageService {
     }
 
     private void fillTestData() {
-        // Тестовые продукты
         Product bread = new SimpleProduct(UUID.randomUUID(), "Хлеб", 50);
         Product milk = new DiscountedProduct(UUID.randomUUID(), "Молоко", 80, 10);
         Product eggs = new DiscountedProduct(UUID.randomUUID(), "Яйца", 120, 5);
@@ -37,7 +36,6 @@ public class StorageService {
         productMap.put(butter.getId(), butter);
         productMap.put(chocolate.getId(), chocolate);
 
-        // Тестовые статьи
         Article article1 = new Article(UUID.randomUUID(), "Польза хлеба", "Хлеб содержит много углеводов и полезен для энергии.");
         Article article2 = new Article(UUID.randomUUID(), "Как выбрать сыр", "Сыр бывает твёрдый и мягкий. Ищите качественный сыр.");
         Article article3 = new Article(UUID.randomUUID(), "Рецепт яичницы", "Яйца пожарьте на масле, добавьте соль.");
@@ -61,4 +59,8 @@ public class StorageService {
         all.addAll(articleMap.values());
         return all;
     }
+    public Optional<Product> getProductById(UUID id) {
+        return Optional.ofNullable(productMap.get(id));
+    }
+
 }
