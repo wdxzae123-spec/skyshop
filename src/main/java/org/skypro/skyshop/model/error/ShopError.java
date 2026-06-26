@@ -1,5 +1,8 @@
 package org.skypro.skyshop.model.error;
 
+/** модель самой ощибки
+ *
+ */
 public class ShopError {
     private final String code;
     private final String message;
